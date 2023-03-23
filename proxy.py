@@ -1,12 +1,10 @@
 import httpx
 
 http_proxies = [
-	"https://api.proxyscrape.com/v2/?request=displayproxies&protocol=http&timeout=10000&country=all&ssl=all&anonymity=all",
-	"https://www.proxy-list.download/api/v1/get?type=http&anon=elite",
-	"https://www.proxy-list.download/api/v1/get?type=http&anon=anonymous"
+	"https://proxyspace.pro/http.txt"
 ]
 
-file_name = "http.txt"
+file_name = "proxy.txt"
 with open(file_name, 'w'):
 	for proxies in http_proxies:
 		if httpx.get(proxies).status_code == 200:
