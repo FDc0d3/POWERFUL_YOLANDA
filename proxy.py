@@ -4,7 +4,7 @@ http_proxies = [
 	"https://proxyspace.pro/http.txt"
 ]
 
-file_name = "proxy.txt"
+file_name = "http.txt"
 with open(file_name, 'w'):
 	for proxies in http_proxies:
 		if httpx.get(proxies).status_code == 200:
